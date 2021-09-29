@@ -1,42 +1,53 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-
-const ListPrompt = require("inquirer/lib/prompts/list")
-
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license){
-    return `# ${license.title}`
-  }else{
-    return ""
+function getLicenseLink(license) {
+  if (license == "None") {
+    return "";
   }
-
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license){
-    return `# ${license.link}`
-  }else{
-    return ""
+  else {
+    return `\n*[License](#license)\n`;
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license){
-  if (license){
-    return `# ${renderLicenseBadge(license)} ${renderLicenseLink(license)}`
-  }else{
-    return ""
+function licenseContainer(license) {
+  if (license == "None") {
+    return "";
+  }
+  else {
+    return `##License
+    Project license: ${lcleicense}`;
   }
 }
 
-// TODO: Create a function to generate markdown for README
+function getLicenseBadge(license) {
+  if (license == "None") {
+    return "";
+  }
+  else {
+    return `![License](https://img.shields.io/badge/license-${license}-green.svg))`
+  }
+}
+
 function generateMarkdown(data) {
-  return `# ${data.title}
-${renderLicenseSection(data.license)}
-`;
+  return `#Description: ${data.title}
+  ${getLicenseBadge(data.license)}
+  ##Description
+  ${data.description}
+  ##Table of Contents
+  *[Installation](#installation)
+  *[Usage](Usage)
+  ${getLicenseLink(data.license)}
+  *[Contributing](#contributing)
+  *[Tests](#tests)
+  *[Questions](#questions)
+  ##Installation
+  Install dependencies in the command line with command: ${data.installation}
+  ##Usage
+  ${licenseContainer(data.license)}
+  ${data.usage}
+  ##Contributing
+  ${data.contributing}
+  ##Tests
+  Run tests with command: ${data.test}
+  ##Questions
+  For specific questions, email me at ${data.email}, or open an issue on my [github](https://www.github.com/${data.github}/). 
+  `;
 }
-
-module.exports = generateMarkdown;

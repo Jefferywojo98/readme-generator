@@ -30,7 +30,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What kind of license does your project have?',
-        choices: ["MIT", "ISC","GNU","Mozilla", "N/A"],
+        choices: ['GNU', 'MIT', 'None'],
     },
     {
         type: 'input',
@@ -65,7 +65,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((res) => {
-        writeToFile("ReadMe.md", generateMarkdown({...res}));
+        writeToFile("README.md", generateMarkdown({...res}));
     });
 }
 
