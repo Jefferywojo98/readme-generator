@@ -47,12 +47,12 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter any relevant usage infomation you might have',
+        message: 'Enter any relevant usage you have done',
     },
     {
         type: 'input',
         name: 'contributing',
-        message: 'Enter any relevant contributing infomation you might have',
+        message: 'Enter any relevant contribution you have done',
     }
 ];
 
