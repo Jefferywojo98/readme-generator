@@ -1,7 +1,7 @@
 # Readme Generator
 By: Jeffery Wojciechowski
 ___
-![mit](https://img.shields.io/badge/license-MIT-brightgreen
+![mit](https://img.shields.io/badge/license-MIT-brightgreen)
 ### The User Story
 ```md
 AS you help my manager
