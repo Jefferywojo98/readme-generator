@@ -22,7 +22,7 @@ function getLicenseBadge(license) {
     return "";
   }
   else {
-    return `![License](https://img.shields.io/badge/license-${license}-green.svg))`
+    return `![License](https://img.shields.io/badge/license-${license}-green.svg)`
   }
 }
 

@@ -1,5 +1,5 @@
 ## Readme Generator
-  ![License](https://img.shields.io/badge/license-MIT-green.svg))
+  ![License](https://img.shields.io/badge/license-MIT-green.svg)
   
   ## This appication is design for the user to create a readme for there repositories
   
