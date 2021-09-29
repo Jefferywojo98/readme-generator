@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// array of questions for user
+// questions for the user
 const questions = [
     {
         type: 'input',
@@ -30,7 +30,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What kind of license does your project have?',
-        choices: ["MIT", "ISC","Mozilla", "N/A"],
+        choices: ["MIT", "ISC","GNU","Mozilla", "N/A"],
     },
     {
         type: 'input',
@@ -47,12 +47,12 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter any relevant usage info',
+        message: 'Enter any relevant usage infomation you might have',
     },
     {
         type: 'input',
         name: 'contributing',
-        message: 'Enter any relevant contributing info',
+        message: 'Enter any relevant contributing infomation you might have',
     }
 ];
 
