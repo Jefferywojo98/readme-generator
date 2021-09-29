@@ -3,7 +3,7 @@ function getLicenseLink(license) {
     return "";
   }
   else {
-    return `\n*[License](#license)\n`;
+    return `\n* [License](# license)\n`;
   }
 }
 
@@ -12,7 +12,7 @@ function licenseContainer(license) {
     return "";
   }
   else {
-    return `##License
+    return `License
     Project license: ${license}`;
   }
 }
@@ -30,20 +30,20 @@ function generateMarkdown(data) {
   return `## ${data.title}
   ${getLicenseBadge(data.license)}
   
-  ## ${data.description}
+  ${data.description}
   
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](Usage)
-  * ${getLicenseLink(data.license)}
+   ${getLicenseLink(data.license)}
   * [Contributing](#contributing)
   * [Test](#test)
   * [Question](#question)
- 
+
   ## Installation
   Install dependencies in the command line with command: ${data.installation}
   ## Usage
-  ${licenseContainer(data.license)}
+  ${licenseContainer(data.license)} 
   ${data.usage}
   
   ## Contributing
