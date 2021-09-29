@@ -27,34 +27,33 @@ function getLicenseBadge(license) {
 }
 
 function generateMarkdown(data) {
-  return `## Description: ${data.title}
+  return `## ${data.title}
   ${getLicenseBadge(data.license)}
   
-  ##Description
-  ${data.description}
+  ## ${data.description}
   
-  ##Table of Contents
-  *[Installation](#installation)
-  *[Usage](Usage)
-  ${getLicenseLink(data.license)}
-  *[Contributing](#contributing)
-  *[Test](#test)
-  *[Question](#question)
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](Usage)
+   ${getLicenseLink(data.license)}
+  * [Contributing](#contributing)
+  * [Test](#test)
+  * [Question](#question)
  
-  ##Installation
+  ## Installation
   Install dependencies in the command line with command: ${data.installation}
-  ##Usage
+  ## Usage
   ${licenseContainer(data.license)}
   ${data.usage}
   
-  ##Contributing
+  ## Contributing
   ${data.contributing}
  
-  ##Test
+  ## Test
   Run tests with command: ${data.test}
   
-  ##Question
-  Questions? Email me at ${data.email}, or open an issue on ![github](https://www.github.com/${data.github}/). 
+  ## Question
+  Questions? Email me at ${data.email}, or open an issue on [${data.github}](https://github.com/${data.github}). 
   `;
 } 
 module.exports = generateMarkdown
